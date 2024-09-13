@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/nav"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/naranja"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/nerdology" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/mainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="Enciclopedia de todos tus personajes favoritos"
+            android:textColor="@color/white"
+            android:textFontWeight="900"
+            android:textSize="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nav" />
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="horizontal"
+        android:translationY="-20dp"
+        >
+        <ImageView
+            android:translationX="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cuttedsuperman" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="122dp"
+        android:id="@+id/body"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_background"
+        >
+    <ImageView
+        android:id="@+id/marvelLogo"
+        android:layout_marginTop="20dp"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:src="@drawable/dclogo"
+        />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="16dp"
+            android:id="@+id/marvel_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/marvelLogo"
+            />
+        <ImageView
+            android:layout_marginTop="16dp"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:src="@drawable/dcrealpng"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="16dp"
+            android:id="@+id/dc_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/marvelLogo"
+            />
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
